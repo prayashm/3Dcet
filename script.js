@@ -39,27 +39,28 @@ $("#example-stop").click(function() {
 var duration = 4.0;
 var targety = 100.0;
 var target = [0,0, targety];
-var cameraList = [
-{ eye: [25,80,100],
-	target: [0,0,100],
-	text: "Admin Building"
-},
-{ eye: [10, 0, targety],
-	target: target,
-	text: "Right"
-},
-{ eye: [0,10, targety],
-	target: target,
-	text: "Back"
-},
-{ eye: [-10,0, targety],
-	target: target,
-	text: "Left"
-}
-];
+
+var cameraList = {};
+cameraList["Academic Block"] = { 
+	eye: [1250,200,350],
+	target: [350,1100,350],
+};
+cameraList["C Block Side Entrance"] = { 	
+	eye: [-650, 200, 50],
+	target: [-650,400,50],
+};
+cameraList["C 102"] = { 	
+	eye: [-700, 550, 50],
+	target: [800,550,50],
+};
+cameraList["C 101"] = { 	
+	eye: [-600, 550, 50],
+	target: [-800,550,50],
+};
+
 $("#example-list").change(function(){
-	autospin:0;
-	var currentCamera = $(this).val();
+	var currentCamera = $("option:selected").text();
+	console.log(currentCamera);
 	var cam = cameraList[currentCamera];
 	//var nextCamText = cameraList[currentCamera].text;
 	//$("#example-camera")[0].innerHTML = cam.text;
