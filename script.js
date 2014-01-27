@@ -5,7 +5,7 @@ var Sketchfab = sketchfabModule.Sketchfab;
 Q = sketchfabModule.Q;
 
 // example with only start stop
-var urlid = "6ce8d158a38f41b39db26427c7c65f50";
+var urlid = "c878c8f2d235407b91082877819fe71c";
 var iframeWindow = $('#myIframe')[0];
 var options = {
 	"nocamera":1,
